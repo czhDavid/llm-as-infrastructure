@@ -18,10 +18,12 @@
     "format:check": "prettier --check '**/*.ts'"
   },
   "devDependencies": {
+    "@aws-sdk/client-bedrock-runtime": "^3.1014.0",
     "@eslint/js": "^10.0.1",
     "@types/jest": "^30",
     "@types/node": "^24.10.1",
     "aws-cdk": "2.1109.0",
+    "esbuild": "^0.27.4",
     "eslint": "^10.1.0",
     "eslint-config-prettier": "^10.1.8",
     "jest": "^30",
