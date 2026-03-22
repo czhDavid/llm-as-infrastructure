@@ -4,6 +4,7 @@ import { BudgetStack } from '../lib/stacks/budget-stack';
 import { BedrockDemoStack } from '../lib/stacks/bedrock-demo-stack';
 import { BedrockGuardrailsDemoStack } from '../lib/stacks/bedrock-guardrails-demo-stack';
 import { BedrockAgentDemoStack } from '../lib/stacks/bedrock-agent-demo-stack';
+import { BedrockKnowledgeBaseDemoStack } from '../lib/stacks/bedrock-knowledge-base-demo-stack';
 
 const app = new cdk.App();
 
@@ -14,3 +15,4 @@ new BedrockDemoStack(app, 'BedrockDemoStack', { env });
 
 new BedrockGuardrailsDemoStack(app, 'BedrockGuardrailsDemoStack', { env });
 new BedrockAgentDemoStack(app, 'BedrockAgentDemoStack', { env });
+new BedrockKnowledgeBaseDemoStack(app, 'BedrockKnowledgeBaseDemoStack', { env });

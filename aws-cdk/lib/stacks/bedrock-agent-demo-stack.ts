@@ -40,11 +40,7 @@ export class BedrockAgentDemoStack extends cdk.Stack {
             name: 'OffTopic',
             definition:
               'Any topic that is not directly related to the Alma Career AI tech meetup, its organizers, presenters, or the presentation topic.',
-            examples: [
-              'What is the capital of France?',
-              'Tell me a joke.',
-              'How do I cook pasta?',
-            ],
+            examples: ['What is the capital of France?', 'Tell me a joke.', 'How do I cook pasta?'],
             type: 'DENY',
           },
         ],
