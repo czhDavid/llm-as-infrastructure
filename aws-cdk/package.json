@@ -11,16 +11,25 @@
     "cdk": "cdk",
     "deploy": "cdk deploy",
     "diff": "cdk diff",
-    "synth": "cdk synth"
+    "synth": "cdk synth",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write '**/*.ts'",
+    "format:check": "prettier --check '**/*.ts'"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@types/jest": "^30",
     "@types/node": "^24.10.1",
-    "jest": "^30",
-    "ts-jest": "^29",
     "aws-cdk": "2.1109.0",
+    "eslint": "^10.1.0",
+    "eslint-config-prettier": "^10.1.8",
+    "jest": "^30",
+    "prettier": "^3.8.1",
+    "ts-jest": "^29",
     "ts-node": "^10.9.2",
-    "typescript": "~5.9.3"
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.57.1"
   },
   "dependencies": {
     "aws-cdk-lib": "^2.241.0",

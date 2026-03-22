@@ -12,18 +12,14 @@ export class BudgetStack extends cdk.Stack {
 
     const monthlyBudgetLimit = 50;
 
-    const alertEmail = ssm.StringParameter.valueForStringParameter(
-      this, '/config/alert-email',
-    );
+    const alertEmail = ssm.StringParameter.valueForStringParameter(this, '/config/alert-email');
 
     // SNS topic for budget alerts
     const budgetAlertTopic = new sns.Topic(this, 'BudgetAlertTopic', {
       displayName: 'Budget Alerts',
     });
 
-    budgetAlertTopic.addSubscription(
-      new subscriptions.EmailSubscription(alertEmail),
-    );
+    budgetAlertTopic.addSubscription(new subscriptions.EmailSubscription(alertEmail));
 
     // AWS Budget: $50/month with alerts at 50%, 80%, 100%
     new budgets.CfnBudget(this, 'MonthlyBudget', {
